@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="traverse.fsx" />
+    <None Include="MixingListsAndElevatedValues.fsx" />
+    <None Include="ApplicativeVsMonadic.fsx" />
+    <None Include="Bind.fsx" />
+    <None Include="Zip.fsx" />
+    <None Include="Map.fsx" />
+    <None Include="Apply.fs" />
+    <None Include="Return.fsx" />
+    <None Include="Infix.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+</Project>
