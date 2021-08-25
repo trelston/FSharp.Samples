@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="RealWorldExample1.fsx" />
+    <None Include="SequenceAsARecipe.fsx" />
+    <None Include="sequence.fsx" />
     <None Include="traverse.fsx" />
     <None Include="MixingListsAndElevatedValues.fsx" />
     <None Include="ApplicativeVsMonadic.fsx" />

@@ -94,11 +94,11 @@ module List =
         let prependToList head tail = head :: tail
 
         //right fold over the list
-        let initState = retn []
-        let folder head tail =
-            retn prependToList <*> (f head) <*> tail
+        let initTailState = retn []
+        let folder head newTailState =
+            retn prependToList <*> (f head) <*> newTailState
 
-        List.foldBack folder list initState
+        List.foldBack folder list initTailState
 
     let traverseResultUsingFoldbackM f list =
 
@@ -108,13 +108,13 @@ module List =
         let prependToList head tail = head::tail
 
         //right fold overt the list
-        let initState = retn []
-        let folder head tail =
+        let initTailState = retn []
+        let folder head newTailState =
             (f head) >>= (fun h ->
-                tail >>= (fun t ->
-                retn (prependToList h t)))
+                newTailState >>= (fun ns ->
+                retn (prependToList h ns)))
 
-        List.foldBack folder list initState
+        List.foldBack folder list initTailState
 
 // pass in strings wrapped in a List
 // (applicative version)
@@ -156,3 +156,39 @@ let badM = ["1"; "x"; "3"] |> List.traverseResultUsingFoldbackM parseInt
 // parseInt "3" >>= 3 -> [] >>= [] -> Ok (prependToList 3 [])
 // parseInt "x"
 // Error ["x is not an int"]
+
+
+
+module Option =
+
+    /// Map a Result producing function over an Option to get a new Result
+    /// ('a -> Result<'b>) -> 'a option -> Result<'b option>
+    let traverseResultA f opt =
+        
+        // define the applicative functions
+        let (<*>) = Result.apply
+        let retn = Ok
+
+        // loop through the option
+        match opt with
+        | None ->
+            // if empty, lift None to an Result
+            retn None
+        | Some x ->
+            // lift value to an Result
+            retn Some <*> (f x)
+
+// pass in an string wrapped in an Option
+let good = Some "1" |> Option.traverseResultA parseInt
+// get back a Result containing an Option
+// Ok (Some 1)
+
+// pass in an string wrapped in an Option
+let bad = Some "x" |> Option.traverseResultA parseInt
+// get back a Result containing an Option
+// Error ["x is not an int"]
+
+// pass in an string wrapped in an Option
+let goodNone = None |> Option.traverseResultA parseInt
+// get back a Result containing an Option
+// Ok (None)
