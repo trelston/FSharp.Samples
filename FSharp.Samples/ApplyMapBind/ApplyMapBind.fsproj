@@ -1,12 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <WarnOn>3390;$(WarnOn)</WarnOn>
   </PropertyGroup>
-
   <ItemGroup>
+    <None Include="paket.references" />
+    <None Include="TheReaderMonad.fsx" />
     <None Include="RealWorldExample1.fsx" />
     <None Include="SequenceAsARecipe.fsx" />
     <None Include="sequence.fsx" />
@@ -21,7 +22,9 @@
     <None Include="Infix.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
-  <ItemGroup />
-
+  <ItemGroup>
+    <PackageReference Include="FAKE.Core" Version="5.16.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.2.7" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

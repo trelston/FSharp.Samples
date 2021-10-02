@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="CheckIfAWebsiteIsResponding.fsx" />
+    <None Include="FAKE_for_Build_CI_Scripts.fsx" />
+    <None Include="DevelopmentAndDevopsScripts.fsx" />
+    <None Include="ExploreAndDevelopInteractively.fsx" />
+    <None Include="paket.references" />
+    <None Include="Syntax.fsx" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

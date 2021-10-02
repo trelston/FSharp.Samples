@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<DateSerTest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Local>2014-07-04T00:00:00+05:30</Local>
+  <Utc>2014-07-04T00:00:00Z</Utc>
+</DateSerTest>
