@@ -1,23 +1,28 @@
 ﻿// Include Fake lib
 // Assumes NuGet has been used to fetch the FAKE libraries
 #r @"../../packages/FAKE.Core/tools/FakeLib.dll"
-open Fake
+open Fake.Core
+open Fake.IO
 
 // Properties
 let buildDir = "./build/"
 
 // Targets
-Target "Clean" (fun _ ->
-    CleanDir buildDir
+
+Target.create "Clean" (fun _ ->
+    Shell.cleanDir buildDir
 )
 
-Target "Default" (fun _ ->
-    trace "Hello World from FAKE"
+Target.create "Default" (fun _ ->
+    Trace.trace "Hello World from FAKE"
 )
+
 
 // Dependencies
+open Fake.Core.TargetOperators
+
 "Clean"
-  ==> "Default"
+    ==> "Default"
 
 // start build
-RunTargetOrDefault "Default"
+Target.runOrDefault "Default"
