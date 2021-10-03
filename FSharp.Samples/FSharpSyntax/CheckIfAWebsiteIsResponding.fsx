@@ -34,3 +34,8 @@ let bad = "http://example.bad", []
 
 [google;bad]
 |> List.iter checkServer
+
+(*
+Response for http://google.com is 200
+Error for http://example.bad. Message=No response
+*)
