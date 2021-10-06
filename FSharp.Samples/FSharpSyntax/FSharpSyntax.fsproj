@@ -13,6 +13,9 @@
     <None Include="paket.references" />
     <None Include="Syntax.fsx" />
     <Compile Include="Program.fs" />
+    <None Include="ConvertRSSFeedToCSV.fsx" />
+    <None Include="WMICheckStatsProcess.fsx" />
+    <None Include="QuickSort.fsx" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
