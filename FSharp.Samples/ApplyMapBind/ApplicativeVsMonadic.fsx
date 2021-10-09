@@ -1,5 +1,8 @@
-﻿//Applicative style is when the input parameters of a function are independent and do not depend on previous input parameters.
-//Monadic style is when the next input parameter of a function depends on the result of the previous input parameter to the function
+﻿//Applicative style is when the input parameters of a function are independent
+//and do not depend on previous input parameters.
+
+//Monadic style is when the next input parameter of a function depends on the result of the previous
+//input parameter to the function
 
 type CustomerId = CustomerId of int
 type EmailAddress = EmailAddress of string

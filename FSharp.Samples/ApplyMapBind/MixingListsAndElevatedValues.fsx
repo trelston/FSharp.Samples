@@ -73,7 +73,7 @@ let rec mapResult f list =
     | head::tail ->
         retn1 prependToList <**> (f head) <**> (mapResult f tail)
 
-let parseInt str =
+let parseInt (str:string) =
     match (System.Int32.TryParse str) with
     | true,i -> Ok i
     | false,_ -> Error [str + " is not an int"]

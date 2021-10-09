@@ -1,5 +1,4 @@
-﻿//I prefer using andThen
-//Allows you to compose world-crossing ("monadic") functions
+﻿//Allows you to compose world-crossing ("monadic") functions
 //Signature: (a->E<b>) -> E<a> -> E<b> . 
 //Alternatively with the parameters reversed: E<a> -> (a->E<b>) -> E<b>
 
@@ -11,7 +10,8 @@
 //These kinds of "world-crossing" functions are recognizable by their signature a -> E<b> ;
 //their input is in the normal world but their output is in the elevated world.
 
-//What "bind" does is transform a world-crossing function (a->E<b>) (commonly known as a "monadic function") into a lifted function E<a> -> E<b>.
+//What "bind" does is transform a world-crossing function (a->E<b>) (commonly known as a "monadic function")
+//into a lifted function E<a> -> E<b>.
 
 //The benefit of doing this is that the resulting lifted functions live purely in the elevated world,
 //and so can be combined easily by composition
