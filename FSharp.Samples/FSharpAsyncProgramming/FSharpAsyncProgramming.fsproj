@@ -9,6 +9,10 @@
     <ItemGroup>
         <Compile Include="Program.fs" />
         <None Include="TraditionalAsyncProgramming.fsx" />
+        <None Include="AsynchronousWorkflows.fsx" />
+        <None Include="NestingAsynchronousWorkflows.fsx" />
+        <None Include="CancellingWorkflows.fsx" />
+        <None Include="ComposingWorkflowsInSeriesAndParallel.fsx" />
     </ItemGroup>
 
 </Project>
