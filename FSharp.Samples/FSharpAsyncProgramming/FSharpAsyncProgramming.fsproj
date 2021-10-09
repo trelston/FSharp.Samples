@@ -13,6 +13,7 @@
         <None Include="NestingAsynchronousWorkflows.fsx" />
         <None Include="CancellingWorkflows.fsx" />
         <None Include="ComposingWorkflowsInSeriesAndParallel.fsx" />
+        <None Include="AsyncWebDownloader.fsx" />
     </ItemGroup>
 
 </Project>
