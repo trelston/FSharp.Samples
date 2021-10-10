@@ -20,6 +20,9 @@
     <None Include="TryParseAndTryGetValue.fsx" />
     <None Include="NamedArguments.fsx" />
     <None Include="ActivePatterns.fsx" />
+    <None Include="ObjectExpressions.fsx" />
+    <None Include="MixingInterfacesandFSharpTypes.fsx" />
+    <None Include="Reflection.fsx" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
