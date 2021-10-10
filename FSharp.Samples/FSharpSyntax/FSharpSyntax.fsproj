@@ -23,6 +23,15 @@
     <None Include="ObjectExpressions.fsx" />
     <None Include="MixingInterfacesandFSharpTypes.fsx" />
     <None Include="Reflection.fsx" />
+    <None Include="ClassesAndInterfaces.fsx" />
+    <None Include="Generics.fsx" />
+    <None Include="Structs.fsx" />
+    <None Include="Exceptions.fsx" />
+    <None Include="ExtensionMethods.fsx" />
+    <None Include="ParameterArrays.fsx" />
+    <None Include="Events.fsx" />
+    <None Include="Delegates.fsx" />
+    <None Include="Enums.fsx" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
