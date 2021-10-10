@@ -18,6 +18,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestConsoleApp", "TestConso
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpAsyncProgramming", "FSharpAsyncProgramming\FSharpAsyncProgramming.fsproj", "{FBD910EC-E206-4967-9842-B2685838E278}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MessagesAndAgents", "MessagesAndAgents\MessagesAndAgents.fsproj", "{ABC71184-7C65-4505-BAA7-4D1EE90F25F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{FBD910EC-E206-4967-9842-B2685838E278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD910EC-E206-4967-9842-B2685838E278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD910EC-E206-4967-9842-B2685838E278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC71184-7C65-4505-BAA7-4D1EE90F25F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC71184-7C65-4505-BAA7-4D1EE90F25F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC71184-7C65-4505-BAA7-4D1EE90F25F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC71184-7C65-4505-BAA7-4D1EE90F25F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

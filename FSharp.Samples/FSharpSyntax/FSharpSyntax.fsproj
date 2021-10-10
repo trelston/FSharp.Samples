@@ -17,6 +17,9 @@
     <None Include="WMICheckStatsProcess.fsx" />
     <None Include="QuickSort.fsx" />
     <None Include="ShoppingCartExample.fsx" />
+    <None Include="TryParseAndTryGetValue.fsx" />
+    <None Include="NamedArguments.fsx" />
+    <None Include="ActivePatterns.fsx" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

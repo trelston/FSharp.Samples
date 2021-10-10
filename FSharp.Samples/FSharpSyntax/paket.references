@@ -1,3 +1,4 @@
 FSharp.Core
 FAKE.Core
 FSharp.Data
+System.Data.SqlClient
